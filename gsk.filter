@@ -1,7 +1,7 @@
 #===============================================================================================================
 # NeverSink's Indepth Loot Filter - for Path of Exile
 #===============================================================================================================
-# VERSION:  0.1.4
+# VERSION:  0.1.5
 # AUTHOR:   NeverSink (adaptations: GSK)
 #
 # This is a mini-filter designed for early PoE2 EA gameplay. I will eventually replace it with a full-fledged filter
@@ -24,15 +24,15 @@
 # add a hash symbol in front of Continue to remove this behaviour
 
 # Items have a pink border and are displayed bigger
-Show
-	BaseType "Expert Bombard Crossbow"
-	SetBackgroundColor 100 0 100 255
-    SetBorderColor 255 16 230
-    SetFontSize 35
-	PlayAlertSound 3 300
-	PlayEffect Pink
-	MinimapIcon 0 Pink Circle    
-	Continue
+#Show
+#	BaseType "Expert Bombard Crossbow"
+#	SetBackgroundColor 100 0 100 255
+#    SetBorderColor 255 16 230
+#    SetFontSize 35
+#	PlayAlertSound 3 300
+#	PlayEffect Pink
+#	MinimapIcon 0 Pink Circle    
+#	Continue
 
 
 #--------------------------
