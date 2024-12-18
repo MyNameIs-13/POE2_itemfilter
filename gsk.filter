@@ -1003,28 +1003,28 @@ Show
 # Shields
 # Str
 Show
-    BaseType "Stone Tower Shield" "Rampart Tower Shield" "Braced Tower Shield"
+    BaseType " Tower Shield"
     Class  "Shields"
     SetBorderColor 255 0 0
     Continue
 
 # Dex
 Show
-    BaseType "Edged Buckler" "Spiked Buckler" "Plated Buckler"
+    BaseType " Buckler"
     Class  "Shields"
     SetBorderColor 0 255 0
     Continue
 
 # Str-Int
 Show
-    BaseType "Omen Crest Shield" "Jingling Crest Shield" "Sigil Crest Shield"
+    BaseType " Crest Shield"
     Class  "Shields"
     SetBorderColor 127 0 127
     Continue
 
 # Str-Dex
 Show
-    BaseType "Feathered Targe" "Crescent Targe" "Pelage Targe"
+    BaseType " Targe"
     Class  "Shields"
     SetBorderColor 127 127 0
     Continue
