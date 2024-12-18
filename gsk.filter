@@ -761,7 +761,7 @@ Show
     Rarity <= Magic
     AreaLevel >= 60
 	SetFontSize 35
-	SetBackgroundColor 130 110 110
+	SetBackgroundColor 70 50 50
 	Continue
 
 Show
@@ -770,7 +770,7 @@ Show
     Rarity <= Magic
     AreaLevel < 60
     SetFontSize 35
-	SetBackgroundColor 130 110 110
+	SetBackgroundColor 70 50 50
 	Continue
 
 Show
@@ -778,7 +778,7 @@ Show
     Rarity <= Magic
     AreaLevel < 60
     SetFontSize 35
-	SetBackgroundColor 130 110 110
+	SetBackgroundColor 70 50 50
 	Continue
 
 Show
@@ -787,7 +787,7 @@ Show
     Rarity <= Magic
     AreaLevel >= 60
 	SetFontSize 35
-	SetBackgroundColor 130 110 110
+	SetBackgroundColor 70 50 50
 	Continue	
 
 Show
@@ -795,7 +795,7 @@ Show
     Rarity <= Magic
     AreaLevel >= 60
 	SetFontSize 35
-	SetBackgroundColor 130 110 110
+	SetBackgroundColor 70 50 50
 	Continue	
 
 Show
@@ -803,7 +803,7 @@ Show
     Rarity <= Magic
     AreaLevel < 60
     SetFontSize 35
-	SetBackgroundColor 130 110 110
+	SetBackgroundColor 70 50 50
 	Continue	
 
 #--------------------------
