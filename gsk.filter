@@ -67,14 +67,14 @@ Show
 #--------------------------
 
 Show
-    StackSize >= 500
+    StackSize >= 1000
     BaseType == "Gold"
     SetTextColor 255 255 255
     SetBorderColor 255 255 255
     PlayEffect Orange Temp
 
 Hide
-    StackSize <= 50
+    StackSize <= 150
     BaseType == "Gold"
     SetTextColor 180 180 180
     SetBorderColor 0 0 0 255
@@ -813,37 +813,43 @@ Show
 
 # Str
 Show
-    BaseType "Expert Moulded Mitts" "Expert Bolstered Mitts" "Expert Riveted Mitts" "Expert Stone Greaves" "Expert Trimmed Greaves" "Expert Iron Greaves" "Expert Vaal Cuirass" "Expert Steel Plate" "Expert Iron Cuirass" "Expert Elite Greathelm" "Expert Spired Greathelm" "Expert Soldier Greathelm"
+    BaseType "Expert Moulded Mitts" "Expert Stone Greaves" "Expert Vaal Cuirass" "Expert Steel Plate" "Expert Iron Cuirass" "Expert Elite Greathelm"
+    Rarity <= Magic
     SetBorderColor 255 0 0
     SetFontSize 35
 
 # Dex
 Show
-    BaseType "Expert Spined Bracers" "Expert Sectioned Bracers" "Expert Firm Bracers" "Expert Lizardscale Boots" "Expert Steeltoe Boots" "Expert Laced Boots" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Hunter Hood" "Expert Swathed Cap" "Expert Felt Cap"
+    BaseType "Expert Spined Bracers" "Expert Lizardscale Boots" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Hunter Hood"
+    Rarity <= Magic
     SetBorderColor 0 255 0
     SetFontSize 35
 
 # Int
 Show
-    BaseType "Expert Intricate Gloves" "Expert Jewelled Gloves" "Expert Sombre Gloves" "Expert Feathered Sandals" "Expert Silk Slippers" "Expert Wrapped Sandals" "Expert Altar Robe" "Expert Keth Raiment" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara" "Expert Wicker Tiara"
+    BaseType "Expert Intricate Gloves" "Expert Feathered Sandals" "Expert Silk Slippers" "Expert Altar Robe" "Expert Keth Raiment" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
+    Rarity <= Magic
     SetBorderColor 0 0 255
     SetFontSize 35
-	
+
 # Str-Int
 Show
-    BaseType "Expert Goldcast Cuffs" "Expert Aged Cuffs" "Expert Rope Cuffs" "Expert Pelt Leggings" "Expert Secured Leggings" "Expert Padded Leggings" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Pelt Mantle" "Expert Heavy Crown" "Expert Martyr Crown" "Expert Horned Crown"
+    BaseType "Expert Goldcast Cuffs" "Expert Pelt Leggings" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Pelt Mantle" "Expert Heavy Crown"
+    Rarity <= Magic
     SetBorderColor 127 0 127
     SetFontSize 35
 
 # Str-Dex
 Show
-    BaseType "Expert Doubled Gauntlets" "Expert Layered Gauntlets" "Expert Ringmail Gauntlets" "Expert Stacked Sabatons" "Expert Braced Sabatons" "Expert Mail Sabatons" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Shielded Helm" "Expert Cowled Helm" "Expert Guarded Helm"
+    BaseType "Expert Doubled Gauntlets" "Expert Stacked Sabatons" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Shielded Helm"
+    Rarity <= Magic
     SetBorderColor 127 127 0
     SetFontSize 35
 
 # Dex-Int
 Show
-    BaseType "Expert Spiral Wraps" "Expert Gauze Wraps" "Expert Linen Wraps" "Expert Hunting Shoes" "Expert Threaded Shoes" "Expert Frayed Shoes" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Expert Waxed Jacket" "Expert Tribal Mask" "Expert Veiled Mask" "Expert Face Mask"
+    BaseType "Expert Spiral Wraps" "Expert Hunting Shoes" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Expert Waxed Jacket" "Expert Tribal Mask"
+    Rarity <= Magic
     SetBorderColor 0 127 127
     SetFontSize 35
 	
@@ -855,26 +861,42 @@ Show
 # Str
 Show
     BaseType "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Expert Plated Mace" "Expert Slim Mace" "Expert Leaden Greathammer" "Expert Cultist Greathammer" "Expert Crumbling Maul" "Expert Oak Greathammer" "Expert Temple Maul" "Expert Forge Maul"
+    Rarity <= Magic
     SetBorderColor 255 0 0
-    SetFontSize 35
+    SetFontSize 20
 
 # Dex
 Show
-    BaseType "Expert Zealot Bow" "Expert Cultist Bow" "Expert Dualstring Bow" "Expert Warden Bow" "Expert Composite Bow" "Expert Shortbow"
+    BaseType "Expert Dualstring Bow""
+    Rarity <= Magic
     SetBorderColor 0 255 0
     SetFontSize 35
 
+Show
+    Rarity <= Magic
+    BaseType "Expert Zealot Bow" "Expert Cultist Bow" "Expert Warden Bow" "Expert Composite Bow" "Expert Shortbow"
+    SetBorderColor 0 255 0
+    SetFontSize 20
+
 # Str-Dex
 Show
-    BaseType "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Tense Crossbow" "Expert Varnished Crossbow" "Expert Sturdy Crossbow" "Advanced Bombard Crossbow"
+    BaseType "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Varnished Crossbow" "Expert Sturdy Crossbow"
+    Rarity <= Magic
     SetBorderColor 127 127 0
     SetFontSize 35
 
+Show
+    Rarity <= Magic
+    BaseType "Expert Dyad Crossbow" "Expert Tense Crossbow"
+    SetBorderColor 127 127 0
+    SetFontSize 20
+
 # Dex-Int
 Show
-    BaseType "Expert Slicing Quarterstaff" "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff" "Expert Crescent Quarterstaff" "Expert Gothic Quarterstaff"
+    Rarity <= Magic
+    BaseType "Expert Slicing Quarterstaff" "Expert Crackling Quarterstaff" "Expert Gothic Quarterstaff"
     SetBorderColor 0 127 127
-    SetFontSize 35
+    SetFontSize 20
 	
 
 #--------------------------
@@ -884,45 +906,82 @@ Show
 # Shields
 # Str
 Show
-    BaseType "Expert Stone Tower Shield" "Expert Rampart Tower Shield" "Expert Braced Tower Shield"
+    BaseType "Expert Stone Tower Shield"
     Class  "Shields"
+    Rarity <= Magic
     SetBorderColor 255 0 0
     SetFontSize 35
+
+Show
+    Rarity == Rare
+    BaseType "Expert Rampart Tower Shield" "Expert Braced Tower Shield"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 255 0 0
+    SetFontSize 18
 
 # Dex
 Show
     BaseType "Expert Edged Buckler" "Expert Spiked Buckler" "Expert Plated Buckler"
     Class  "Shields"
+    Rarity <= Magic
     SetBorderColor 0 255 0
     SetFontSize 35
 
 # Str-Int
 Show
-    BaseType "Expert Omen Crest Shield" "Expert Jingling Crest Shield" "Expert Sigil Crest Shield"
+    BaseType "Expert Omen Crest Shield"
     Class  "Shields"
+    Rarity <= Magic
     SetBorderColor 127 0 127
     SetFontSize 35
 
+Show
+    Rarity == Rare
+    BaseType "Expert Jingling Crest Shield" "Expert Sigil Crest Shield"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 127 0 127
+    SetFontSize 18
+
 # Str-Dex
 Show
-    BaseType "Expert Feathered Targe" "Expert Crescent Targe" "Expert Pelage Targe"
+    BaseType "Expert Feathered Targe"
     Class  "Shields"
+    Rarity <= Magic
     SetBorderColor 127 127 0
     SetFontSize 35
 
+Show
+    Rarity == Rare
+    BaseType "Expert Crescent Targe" "Expert Pelage Targe"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 127 127 0
+    SetFontSize 18
+
 # Quiver
 Show
-    BaseType Toxic Serrated Primed Penetrating Visceral
+    BaseType "Toxic" "Serrated" "Primed" "Penetrating" "Visceral"
     Class  "Quivers"
+    Rarity <= Magic
     SetBorderColor 0 255 0
     SetFontSize 35
 
 # Foci (Focus)
 Show
-    BaseType "Expert "
+    BaseType "Expert Plumed Focus"
     Class  "Foci"
+    Rarity <= Magic
     SetBorderColor 0 0 255
     SetFontSize 35
+
+Show
+    BaseType "Expert Crystal Focus" "Expert Antler Focus"
+    Class  "Foci"
+    Rarity <= Magic
+    SetBorderColor 0 0 255
+    SetFontSize 18
 
 
 #--------------------------
@@ -943,7 +1002,7 @@ Show
 
 # Int
 Show
-    BaseType " Gloves" " Sandals" " Slippers" " Robe" " Raiment" " Tiara" "Circlet"
+    BaseType " Gloves" " Sandals" " Slippers" " Robe" " Raiment" " Tiara" " Circlet"
     SetBorderColor 0 0 255
     Continue
 	
@@ -962,7 +1021,7 @@ Show
 
 # Dex-Int
 Show
-    BaseType "Wraps" " Shoes" " Jacket" " Mask"
+    BaseType " Wraps" " Shoes" " Jacket" " Mask" " Garb"
     SetBorderColor 0 127 127
     Continue
 	
@@ -973,7 +1032,7 @@ Show
 
 # Str
 Show
-    Class "One Hand Maces"
+    Class " Maces"
 	SetBorderColor 255 0 0
     Continue
 	
@@ -1100,6 +1159,25 @@ Show
 #--------------------------
 
 Show
+    BaseType "Expert " "Advanced Bombard Crossbow"
+    SetFontSize 35
+    Continue
+
+Show
+    Rarity == Rare
+    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres" "Staves"
+
+Hide
+    Rarity <= Magic
+    BaseType "Expert Gauze Wraps" "Expert Linen Wraps" "Expert Aged Cuffs" "Expert Rope Cuffs" "Expert Layered Gauntlets" "Expert Ringmail Gauntlets" "Expert Jewelled Gloves" "Expert Sombre Gloves" "Expert Sectioned Bracers" "Expert Firm Bracers" "Expert Bolstered Mitts" "Expert Riveted Mitts" "Expert Threaded Shoes" "Expert Frayed Shoes" "Expert Secured Leggings" "Expert Padded Leggings" "Expert Braced Sabatons" "Expert Mail Sabatons" "Expert Wrapped Sandals" "Expert Steeltoe Boots" "Expert Laced Boots" "Expert Trimmed Greaves" "Expert Iron Greaves" "Expert Veiled Mask" "Expert Face Mask" "Expert Martyr Crown" "Expert Horned Crown" "Expert Cowled Helm" "Expert Guarded Helm""Expert Wicker Tiara" "Expert Swathed Cap" "Expert Felt Cap" "Expert Spired Greathelm" "Expert Soldier Greathelm"
+    AreaLevel >= 60
+
+# Failsafe (not explicitly listed Expert Items)
+Show
+    BaseType "Expert "
+    SetTextColor 255 0 127
+
+Show
     Rarity <= Magic
     Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
     AreaLevel < 60
@@ -1109,19 +1187,21 @@ Hide
     Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
     AreaLevel >= 60
 
-
 # (fix for the problem that quaterstaves are also staves)
 Show
     Class "Staves"
+    Rarity <= Magic
     SetBorderColor 0 0 255
     SetFontSize 35
 
+Show
+    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres" "Staves"
+
 #--------------------------
-# OPTIONAL RULES
+# FISHING ROD
 #--------------------------
 
 
-# "Fishing Rod"
 Show
     BaseType "Fishing Rod"
 	SetFontSize 45
@@ -1140,21 +1220,17 @@ Show
 	SetBackgroundColor 70 0 20 255
 	PlayAlertSound 3 300
 	PlayEffect Orange
-	MinimapIcon 0 Orange Pentagon    
-
-# Failsafe (not listed Expert Items)
-Show
-    BaseType Expert
-    SetTextColor 255 0 127
+	MinimapIcon 0 Orange Pentagon
 
 
 #--------------------------
-# Meta
+# FAILSAFE
 #--------------------------
 
-# If this thing crashes, time to update your filter!
-# This is here to prevent people to use this filter for AGES. Expert items will get removed eventually
-# Get a new filter from www.filterblade.xyz
-
 Show
-    BaseType == "Expert Laced Boots"
+	SetBackgroundColor 100 0 100 255
+    SetBorderColor 255 16 230
+    SetFontSize 45
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
