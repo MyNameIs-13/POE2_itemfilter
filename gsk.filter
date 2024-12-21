@@ -1167,16 +1167,6 @@ Show
     Rarity == Rare
     Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres" "Staves"
 
-Hide
-    Rarity <= Magic
-    BaseType "Expert Gauze Wraps" "Expert Linen Wraps" "Expert Aged Cuffs" "Expert Rope Cuffs" "Expert Layered Gauntlets" "Expert Ringmail Gauntlets" "Expert Jewelled Gloves" "Expert Sombre Gloves" "Expert Sectioned Bracers" "Expert Firm Bracers" "Expert Bolstered Mitts" "Expert Riveted Mitts" "Expert Threaded Shoes" "Expert Frayed Shoes" "Expert Secured Leggings" "Expert Padded Leggings" "Expert Braced Sabatons" "Expert Mail Sabatons" "Expert Wrapped Sandals" "Expert Steeltoe Boots" "Expert Laced Boots" "Expert Trimmed Greaves" "Expert Iron Greaves" "Expert Veiled Mask" "Expert Face Mask" "Expert Martyr Crown" "Expert Horned Crown" "Expert Cowled Helm" "Expert Guarded Helm""Expert Wicker Tiara" "Expert Swathed Cap" "Expert Felt Cap" "Expert Spired Greathelm" "Expert Soldier Greathelm"
-    AreaLevel >= 60
-
-# Failsafe (not explicitly listed Expert Items)
-Show
-    BaseType "Expert "
-    SetTextColor 255 0 127
-
 Show
     Rarity <= Magic
     Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
