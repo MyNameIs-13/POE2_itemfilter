@@ -1,16 +1,5 @@
 #===============================================================================================================
-# NeverSink's Indepth Loot Filter - for Path of Exile
-#===============================================================================================================
-# VERSION:  0.1.5
-# AUTHOR:   NeverSink (adaptations: GSK)
-#
-# This is a mini-filter designed for early PoE2 EA gameplay. I will eventually replace it with a full-fledged filter
-# With FilterBlade.xyz support. This filter focuses more on highlighting loot, rather than hiding
-#
-# TWITTER: @NeverSinkDev
-# DISCORD: https://discord.gg/mye6xhF
-# TWITCH:  https://www.twitch.tv/neversink
-# PATREON: https://www.patreon.com/Neversink
+# based on NeverSink's Indepth Loot Filter - for Path of Exile
 
 #--------------------------
 # Custom Rule - adapt yourself
@@ -129,7 +118,7 @@ Hide
     ItemLevel <= 14
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    SetFontSize 18
+    SetFontSize 23
 
 Hide
     BaseType "Uncut Spirit"
@@ -137,14 +126,14 @@ Hide
     ItemLevel <= 14
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    SetFontSize 18
+    SetFontSize 23
 
 Hide
     BaseType "Uncut Support"
     AreaLevel >= 72
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    SetFontSize 18
+    SetFontSize 23
 
 # Campaign (Show all the same)
 Show
@@ -162,19 +151,19 @@ Show
     BaseType "Uncut Skill"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    SetFontSize 18
+    SetFontSize 23
 
 Show
     BaseType "Uncut Spirit"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    SetFontSize 18
+    SetFontSize 23
 
 Show
     BaseType "Uncut Support"
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
-    SetFontSize 18
+    SetFontSize 23
 
 Show
 	Class "Skill Gems"
@@ -864,7 +853,7 @@ Show
     BaseType "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Expert Plated Mace" "Expert Slim Mace" "Expert Leaden Greathammer" "Expert Cultist Greathammer" "Expert Crumbling Maul" "Expert Oak Greathammer" "Expert Temple Maul" "Expert Forge Maul"
     Rarity <= Magic
     SetBorderColor 255 0 0
-    SetFontSize 20
+    SetFontSize 23
 
 # Dex
 Show
@@ -877,7 +866,7 @@ Show
     Rarity <= Magic
     BaseType "Expert Zealot Bow" "Expert Cultist Bow" "Expert Warden Bow" "Expert Composite Bow" "Expert Shortbow"
     SetBorderColor 0 255 0
-    SetFontSize 20
+    SetFontSize 23
 
 # Str-Dex
 Show
@@ -890,7 +879,7 @@ Show
     Rarity <= Magic
     BaseType "Expert Dyad Crossbow" "Expert Tense Crossbow"
     SetBorderColor 127 127 0
-    SetFontSize 20
+    SetFontSize 23
 
 # Dex-Int
 Show
@@ -903,7 +892,7 @@ Show
     BaseType "Expert Slicing Quarterstaff" "Expert Crackling Quarterstaff" "Expert Gothic Quarterstaff"
     Rarity <= Magic
     SetBorderColor 0 127 127
-    SetFontSize 20
+    SetFontSize 23
 
 	
 
@@ -925,7 +914,7 @@ Show
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 255 0 0
-    SetFontSize 20
+    SetFontSize 23
 
 # Dex
 Show
@@ -948,7 +937,7 @@ Show
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 127 0 127
-    SetFontSize 20
+    SetFontSize 23
 
 # Str-Dex
 Show
@@ -963,7 +952,7 @@ Show
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 127 127 0
-    SetFontSize 20
+    SetFontSize 23
 
 # Quiver
 Show
@@ -986,7 +975,7 @@ Show
     Class  "Foci"
     Rarity <= Magic
     SetBorderColor 0 0 255
-    SetFontSize 20
+    SetFontSize 23
 
 
 #--------------------------
