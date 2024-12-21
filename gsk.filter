@@ -89,6 +89,7 @@ Show
 
 
 #--------------------------
+#--------------------------
 # Uncut Gems
 #--------------------------
 
@@ -893,10 +894,17 @@ Show
 
 # Dex-Int
 Show
+    BaseType "Expert Barrier Quarterstaff" "Expert Long Quarterstaff" "Expert Crescent Quarterstaff"
     Rarity <= Magic
+    SetBorderColor 0 127 127
+    SetFontSize 35
+
+Show
     BaseType "Expert Slicing Quarterstaff" "Expert Crackling Quarterstaff" "Expert Gothic Quarterstaff"
+    Rarity <= Magic
     SetBorderColor 0 127 127
     SetFontSize 20
+
 	
 
 #--------------------------
@@ -913,12 +921,11 @@ Show
     SetFontSize 35
 
 Show
-    Rarity == Rare
     BaseType "Expert Rampart Tower Shield" "Expert Braced Tower Shield"
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 255 0 0
-    SetFontSize 18
+    SetFontSize 20
 
 # Dex
 Show
@@ -937,12 +944,11 @@ Show
     SetFontSize 35
 
 Show
-    Rarity == Rare
     BaseType "Expert Jingling Crest Shield" "Expert Sigil Crest Shield"
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 127 0 127
-    SetFontSize 18
+    SetFontSize 20
 
 # Str-Dex
 Show
@@ -953,12 +959,11 @@ Show
     SetFontSize 35
 
 Show
-    Rarity == Rare
     BaseType "Expert Crescent Targe" "Expert Pelage Targe"
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 127 127 0
-    SetFontSize 18
+    SetFontSize 20
 
 # Quiver
 Show
@@ -981,7 +986,7 @@ Show
     Class  "Foci"
     Rarity <= Magic
     SetBorderColor 0 0 255
-    SetFontSize 18
+    SetFontSize 20
 
 
 #--------------------------
@@ -1166,6 +1171,16 @@ Show
 Show
     Rarity == Rare
     Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres" "Staves"
+
+Hide
+    Rarity <= Magic
+    BaseType "Expert Gauze Wraps" "Expert Linen Wraps" "Expert Aged Cuffs" "Expert Rope Cuffs" "Expert Layered Gauntlets" "Expert Ringmail Gauntlets" "Expert Jewelled Gloves" "Expert Sombre Gloves" "Expert Sectioned Bracers" "Expert Firm Bracers" "Expert Bolstered Mitts" "Expert Riveted Mitts" "Expert Threaded Shoes" "Expert Frayed Shoes" "Expert Secured Leggings" "Expert Padded Leggings" "Expert Braced Sabatons" "Expert Mail Sabatons" "Expert Wrapped Sandals" "Expert Steeltoe Boots" "Expert Laced Boots" "Expert Trimmed Greaves" "Expert Iron Greaves" "Expert Veiled Mask" "Expert Face Mask" "Expert Martyr Crown" "Expert Horned Crown" "Expert Cowled Helm" "Expert Guarded Helm""Expert Wicker Tiara" "Expert Swathed Cap" "Expert Felt Cap" "Expert Spired Greathelm" "Expert Soldier Greathelm"
+    AreaLevel >= 60
+
+# Failsafe (not explicitly listed Expert Items)
+Show
+    BaseType "Expert "
+    SetTextColor 255 0 127
 
 Show
     Rarity <= Magic
