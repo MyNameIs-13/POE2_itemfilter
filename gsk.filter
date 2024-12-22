@@ -58,6 +58,14 @@ Hide
     SetBackgroundColor 0 0 0 180
     AreaLevel >= 65
 
+Hide
+    StackSize <= 50
+    BaseType == "Gold"
+    SetTextColor 180 180 180
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 0 0 0 180
+    AreaLevel >= 45
+
 Show
     BaseType == "Gold"
     SetTextColor 180 180 180
