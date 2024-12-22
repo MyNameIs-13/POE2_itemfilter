@@ -66,9 +66,20 @@ Show
 
 
 #--------------------------
-#--------------------------
 # Uncut Gems
 #--------------------------
+
+## Level 20 and higher
+Show
+    BaseType "Uncut "
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 0 Red Star
+    ItemLevel >= 20
 
 # High level & maps
 Show
@@ -86,7 +97,6 @@ Show
     SetTextColor 20 240 240
     SetBorderColor 20 240 240
     PlayEffect Cyan
-    MinimapIcon 1 Cyan Triangle
     ItemLevel >= 17
 
 Show
