@@ -38,18 +38,6 @@ Show
     MinimapIcon 2 Brown Star
     SetFontSize 40
 
-## Divine Orb Style
-Show
-    Class "Currency"
-    BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
-    SetFontSize 45
-    SetTextColor 255 0 0 255
-    SetBorderColor 255 0 0 255
-    SetBackgroundColor 255 255 255 255
-    PlayAlertSound 6 300
-    PlayEffect Red
-    MinimapIcon 0 Red Star
-
 
 #--------------------------
 # Gold
@@ -226,6 +214,18 @@ Show
 # Currency
 #--------------------------
 
+## Divine Orb Style
+Show
+    Class "Currency"
+    BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 0 Red Star
+
 # Currency Tier A: Gemcutter, Annullment
 Show
     Class "Currency"
@@ -304,6 +304,17 @@ Show
 #------------------------------------
 # Maps
 #------------------------------------
+
+## Pinnacle Keys
+Show
+    Class "Pinnacle Keys"
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 0 Red Star
 
 # Fragments (map like items)
 Show
