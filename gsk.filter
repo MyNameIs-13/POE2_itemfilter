@@ -835,42 +835,36 @@ Show
     BaseType "Expert Moulded Mitts" "Expert Stone Greaves" "Expert Vaal Cuirass" "Expert Steel Plate" "Expert Iron Cuirass" "Expert Elite Greathelm"
     Rarity <= Magic
     SetBorderColor 255 0 0
-    SetFontSize 35
 
 # Dex
 Show
     BaseType "Expert Spined Bracers" "Expert Lizardscale Boots" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Hunter Hood"
     Rarity <= Magic
     SetBorderColor 0 255 0
-    SetFontSize 35
 
 # Int
 Show
     BaseType "Expert Intricate Gloves" "Expert Feathered Sandals" "Expert Silk Slippers" "Expert Altar Robe" "Expert Keth Raiment" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
     Rarity <= Magic
     SetBorderColor 0 0 255
-    SetFontSize 35
 
 # Str-Int
 Show
     BaseType "Expert Goldcast Cuffs" "Expert Pelt Leggings" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Pelt Mantle" "Expert Heavy Crown"
     Rarity <= Magic
     SetBorderColor 127 0 127
-    SetFontSize 35
 
 # Str-Dex
 Show
     BaseType "Expert Doubled Gauntlets" "Expert Stacked Sabatons" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Shielded Helm"
     Rarity <= Magic
     SetBorderColor 127 127 0
-    SetFontSize 35
 
 # Dex-Int
 Show
     BaseType "Expert Spiral Wraps" "Expert Hunting Shoes" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Expert Waxed Jacket" "Expert Tribal Mask"
     Rarity <= Magic
     SetBorderColor 0 127 127
-    SetFontSize 35
 	
 
 #--------------------------
@@ -889,7 +883,6 @@ Show
     BaseType "Expert Dualstring Bow""
     Rarity <= Magic
     SetBorderColor 0 255 0
-    SetFontSize 35
 
 Show
     Rarity <= Magic
@@ -902,7 +895,6 @@ Show
     BaseType "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Varnished Crossbow" "Expert Sturdy Crossbow"
     Rarity <= Magic
     SetBorderColor 127 127 0
-    SetFontSize 35
 
 Show
     Rarity <= Magic
@@ -915,7 +907,6 @@ Show
     BaseType "Expert Barrier Quarterstaff" "Expert Long Quarterstaff" "Expert Crescent Quarterstaff"
     Rarity <= Magic
     SetBorderColor 0 127 127
-    SetFontSize 35
 
 Show
     BaseType "Expert Slicing Quarterstaff" "Expert Crackling Quarterstaff" "Expert Gothic Quarterstaff"
@@ -936,7 +927,6 @@ Show
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 255 0 0
-    SetFontSize 35
 
 Show
     BaseType "Expert Rampart Tower Shield" "Expert Braced Tower Shield"
@@ -951,7 +941,6 @@ Show
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 0 255 0
-    SetFontSize 35
 
 # Str-Int
 Show
@@ -959,7 +948,6 @@ Show
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 127 0 127
-    SetFontSize 35
 
 Show
     BaseType "Expert Jingling Crest Shield" "Expert Sigil Crest Shield"
@@ -974,7 +962,6 @@ Show
     Class  "Shields"
     Rarity <= Magic
     SetBorderColor 127 127 0
-    SetFontSize 35
 
 Show
     BaseType "Expert Crescent Targe" "Expert Pelage Targe"
@@ -989,7 +976,6 @@ Show
     Class  "Quivers"
     Rarity <= Magic
     SetBorderColor 0 255 0
-    SetFontSize 35
 
 # Foci (Focus)
 Show
@@ -997,7 +983,6 @@ Show
     Class  "Foci"
     Rarity <= Magic
     SetBorderColor 0 0 255
-    SetFontSize 35
 
 Show
     BaseType "Expert Crystal Focus" "Expert Antler Focus"
@@ -1174,6 +1159,7 @@ Show
 
 Show
     BaseType "Expert " "Advanced Bombard Crossbow"
+    Rarity == Rare
     SetFontSize 35
     Continue
 
