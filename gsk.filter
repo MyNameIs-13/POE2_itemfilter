@@ -106,6 +106,17 @@ Show
     SetBorderColor 20 240 240
     PlayEffect Cyan
     ItemLevel >= 17
+    AreaLevel > 77
+
+Show
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    ItemLevel >= 17
+    AreaLevel <= 77
+    AreaLevel > 64
 
 Show
     BaseType "Uncut "
@@ -117,6 +128,20 @@ Show
     AreaLevel > 64
     ItemLevel > 14
     ItemLevel < 17
+
+Show
+    BaseType "Uncut Support"
+    AreaLevel < 75
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayEffect Cyan
+
+Hide
+    BaseType "Uncut Support"
+    AreaLevel >= 75
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetFontSize 23
 
 Hide
     BaseType "Uncut Skill"
@@ -134,12 +159,6 @@ Hide
     SetBorderColor 20 240 240
     SetFontSize 23
 
-Hide
-    BaseType "Uncut Support"
-    AreaLevel >= 72
-    SetTextColor 20 240 240
-    SetBorderColor 20 240 240
-    SetFontSize 23
 
 # Campaign (Show all the same)
 Show
