@@ -1160,7 +1160,7 @@ Show
 	SetFontSize 35
 
 Show
-    Sockets > 2
+    Sockets >= 2
     Rarity <= Magic
     AreaLevel >= 60
 	SetFontSize 35
