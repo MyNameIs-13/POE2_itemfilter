@@ -6,7 +6,7 @@
 #--------------------------
 
 
-# Meaning of: Continue 
+# Meaning of: Continue
 # The filter will apply additional rules from the remaining filter to the item as well.
 # if i.e. the item you have added in the custom rule will be hidden later in the filer, the the item will not be shown unless Alt is pressed (but then with the defined style)
 # Other example: if the item will another bordercolor later in the filer, the pink border will be overwritten
@@ -20,7 +20,7 @@
 #   SetFontSize 35
 #	PlayAlertSound 3 300
 #	PlayEffect Pink
-#	MinimapIcon 0 Pink Circle    
+#	MinimapIcon 0 Pink Circle
 #	Continue
 
 
@@ -199,7 +199,7 @@ Show
 #--------------------------
 
 # Special A Tier - League specific socketables and jewels
-    Show 
+    Show
     BaseType "Soul Core" "Timeless"
     SetTextColor 0 240 190
     SetBorderColor 0 240 190
@@ -208,7 +208,7 @@ Show
     PlayEffect Cyan
 
 # Special A Tier - Sanctum Relics
-    Show 
+    Show
     Class "Relic"
     SetTextColor 0 240 190
     SetBorderColor 0 240 190
@@ -238,10 +238,10 @@ Show
 	SetBackgroundColor 0 20 40 255
 	PlayAlertSound 3 300
 	PlayEffect Blue
-	MinimapIcon 2 Blue Diamond    
+	MinimapIcon 2 Blue Diamond
 
 # Special B Tier - Any Runes
-    Show 
+    Show
     BaseType " Rune"
     SetTextColor 0 240 190
     PlayEffect Cyan Temp
@@ -307,7 +307,7 @@ Show
 
 Show
     Class "Currency"
-    BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
+    BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
     SetTextColor 255 207 132
     SetBorderColor 255 207 132
     MinimapIcon 2 Grey Circle
@@ -531,7 +531,7 @@ Show # $type->maps $tier->base_fontsize
 	SetFontSize 38
 	WaystoneTier <= 10
 	AreaLevel <= 75
-	Continue	
+	Continue
 
 #------------------------------------
 #   [3102] Map progression
@@ -711,7 +711,7 @@ Show
     DropLevel >= 60
 #	SetTextColor 0 240 190 255
 	SetBorderColor 0 240 190 255
-	SetBackgroundColor 20 20 0 255    
+	SetBackgroundColor 20 20 0 255
 
 Show
     Rarity <= Magic
@@ -720,7 +720,7 @@ Show
     DropLevel >= 60
 #	SetTextColor 0 240 190 255
 	SetBorderColor 0 240 190 255
-	SetBackgroundColor 20 20 0 255   
+	SetBackgroundColor 20 20 0 255
 
 Show
     Rarity <= Magic
@@ -728,7 +728,7 @@ Show
     AreaLevel < 65
 #	SetTextColor 0 240 190 255
 	SetBorderColor 0 240 190 255
-	SetBackgroundColor 20 20 0 255  
+	SetBackgroundColor 20 20 0 255
 
 Hide
     Rarity <= Magic
@@ -736,17 +736,17 @@ Hide
     AreaLevel >= 65
 	SetTextColor 0 240 190 255
 	SetBorderColor 0 240 190 255
-	SetBackgroundColor 20 20 0 255    
+	SetBackgroundColor 20 20 0 255
 
 # Any Charms
-Show 
+Show
     BaseType "Stone Charm" "Golden Charm" "Amethyst Charm" "Thawing Charm"
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 25 100 75
 	PlayEffect Grey Temp
 	SetFontSize 38
 
-Show 
+Show
     BaseType " Charm"
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 25 100 75
@@ -794,62 +794,71 @@ Show
 # Salvagable Items Decorator
 #--------------------------
 
+# all with sockets (campaign only)
 Show
-    Class "Gloves" "Boots" "Helmets"
-    Quality > 10
-    Rarity <= Magic
-    AreaLevel >= 60
-	SetFontSize 35
-	SetBackgroundColor 70 50 50
-	Continue
-
-Show
+    Quality >= 0 # fixes bug that socket rules do not work
     Sockets > 0
-	Quality > 10
     Rarity <= Magic
     AreaLevel < 60
     SetFontSize 35
-	SetBackgroundColor 70 50 50
-	Continue
+    SetBackgroundColor 70 50 50
+    Continue
 
-Show
-    Class "Wands" "Sceptres"
-	Quality > 10
-    Rarity <= Magic
-    SetFontSize 35
-
+# all with quality (campaign only)
 Show
     Quality > 10
     Rarity <= Magic
-    AreaLevel < 60
+    AreaLevel < 65
     SetFontSize 35
-	SetBackgroundColor 70 50 50
-	Continue
+    SetBackgroundColor 70 50 50
+    Continue
 
+# all with socket and quality
 Show
-    Class "Gloves" "Boots" "Helmets"
     Sockets > 0
+    Quality > 10
     Rarity <= Magic
-    AreaLevel >= 60
-	SetFontSize 35
-	SetBackgroundColor 70 50 50
-	Continue	
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
 
+# all with 2 or more sockets
 Show
+    Quality >= 0 # fixes bug that socket rules do not work
     Sockets >= 2
     Rarity <= Magic
-    AreaLevel >= 60
-	SetFontSize 35
-	SetBackgroundColor 70 50 50
-	Continue	
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
 
+# small with one socket
 Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality >= 0 # fixes bug that socket rules do not work
     Sockets > 0
     Rarity <= Magic
-    AreaLevel < 60
     SetFontSize 35
-	SetBackgroundColor 70 50 50
-	Continue	
+    SetBackgroundColor 70 50 50
+    Continue
+
+# small with quality
+Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality > 10
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
+
+# caster weapon
+Show
+    Class "Wands" "Sceptres"
+    Quality > 10
+    Rarity <= Magic
+    SetBackgroundColor 70 50 50
+    SetFontSize 35
+    Continue
+
 
 #--------------------------
 # Elite Armour Bases
@@ -890,7 +899,7 @@ Show
     BaseType "Expert Spiral Wraps" "Expert Hunting Shoes" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Expert Waxed Jacket" "Expert Tribal Mask"
     Rarity <= Magic
     SetBorderColor 0 127 127
-	
+
 
 #--------------------------
 # Elite Weapon Bases
@@ -939,7 +948,7 @@ Show
     SetBorderColor 0 127 127
     SetFontSize 23
 
-	
+
 
 #--------------------------
 # Elite Offhand Bases
@@ -1038,7 +1047,7 @@ Show
     BaseType " Gloves" " Sandals" " Slippers" " Robe" " Raiment" " Tiara" " Circlet"
     SetBorderColor 0 0 255
     Continue
-	
+
 # Str-Int
 Show
     BaseType " Cuffs" " Leggings" " Mantle" " Crown"
@@ -1057,7 +1066,7 @@ Show
     BaseType " Wraps" " Shoes" " Jacket" " Mask" " Garb"
     SetBorderColor 0 127 127
     Continue
-	
+
 
 #--------------------------
 # Exceptional & Normal Weapon Bases
@@ -1068,7 +1077,7 @@ Show
     Class " Maces"
 	SetBorderColor 255 0 0
     Continue
-	
+
 # Dex
 Show
 	Class "Bows"
@@ -1079,13 +1088,13 @@ Show
 Show
 	Class "Crossbows"
     SetBorderColor 127 127 0
-    Continue	
+    Continue
 
 # Dex-Int
 Show
 	Class "Quarterstaves"
     SetBorderColor 0 127 127
-    Continue	
+    Continue
 
 
 #--------------------------
@@ -1125,62 +1134,75 @@ Show
 Show
     Class  "Quivers"
     SetBorderColor 0 255 0
-    Continue    
+    Continue
 
 # Foci (Focus)
 Show
     Class  "Foci"
     SetBorderColor 0 0 255
-    Continue        
+    Continue
 
 
 #--------------------------
 # Salvagable Items Show
 #--------------------------
 
+# all with sockets (campaign only)
 Show
-    Class "Gloves" "Boots" "Helmets"
-    Quality > 10
-    Rarity <= Magic
-    AreaLevel >= 60
-	SetFontSize 35
-
-Show
+    Quality >= 0 # fixes bug that socket rules do not work
     Sockets > 0
-	Quality > 10
     Rarity <= Magic
     AreaLevel < 60
     SetFontSize 35
+    SetBackgroundColor 70 50 50
 
-Show
-    Class "Wands" "Sceptres"
-	Quality > 10
-    Rarity <= Magic
-    SetFontSize 35
-
+# all with quality (campaign only)
 Show
     Quality > 10
     Rarity <= Magic
-    AreaLevel < 60
+    AreaLevel < 65
     SetFontSize 35
+    SetBackgroundColor 70 50 50
 
+# all with socket and quality
 Show
-    Class "Gloves" "Boots" "Helmets"
     Sockets > 0
+    Quality > 10
     Rarity <= Magic
-    AreaLevel >= 60
-	SetFontSize 35
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
 
+# all with 2 or more sockets
 Show
+    Quality >= 0 # fixes bug that socket rules do not work
     Sockets >= 2
     Rarity <= Magic
-    AreaLevel >= 60
-	SetFontSize 35
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
 
+# small with one socket
 Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality >= 0 # fixes bug that socket rules do not work
     Sockets > 0
     Rarity <= Magic
-    AreaLevel < 60
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# small with quality
+Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality > 10
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# caster weapon
+Show
+    Class "Wands" "Sceptres"
+    Quality > 10
+    Rarity <= Magic
+    SetBackgroundColor 70 50 50
     SetFontSize 35
 
 
