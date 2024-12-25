@@ -1218,7 +1218,7 @@ Show
 
 Show
     BaseType "Advanced "
-    AreaLevel >= 74
+    AreaLevel <= 74
 
 Show
     Rarity == Rare
