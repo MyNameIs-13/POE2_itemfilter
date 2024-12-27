@@ -58,7 +58,7 @@ Hide
     SetTextColor 180 180 180
     SetBorderColor 0 0 0 255
     SetBackgroundColor 0 0 0 180
-    AreaLevel >= 75
+    
 
 Hide
     StackSize <= 150
@@ -110,6 +110,13 @@ Show
     SetFontSize 40
     ItemLevel >= 19
 
+# Strict addition
+Hide
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    ItemLevel < 19
+
 Show
     BaseType "Uncut "
     SetTextColor 20 240 240
@@ -117,15 +124,7 @@ Show
     PlayEffect Cyan
     ItemLevel >= 17
     AreaLevel > 77
-
-# Strict addition
-Hide
-    BaseType "Uncut "
-    SetTextColor 20 240 240
-    SetBorderColor 20 240 240
-    ItemLevel < 17
-    AreaLevel >= 75
-
+    
 Show
     BaseType "Uncut "
     SetTextColor 20 240 240
@@ -262,7 +261,7 @@ Show
 Hide
     BaseType " Rune"
     SetTextColor 0 240 190
-    AreaLevel >= 75
+    
 
 # Special B Tier - Any Runes
 Show
@@ -328,7 +327,7 @@ Hide
     BaseType "Regal Shard"
     SetTextColor 255 207 132
     SetBorderColor 255 207 132
-    AreaLevel >= 75
+    
 
 Show
     Class "Currency"
@@ -571,11 +570,11 @@ Show # $type->maps $tier->base_fontsize
 
 # Strict addition
 Hide
-    WaystoneTier <= 5
+    WaystoneTier < 10
     BaseType "Waystone"
     SetTextColor 255 255 255 255
     SetBackgroundColor 20 20 0 255
-    AreaLevel >= 75
+
 
 # !! Waypoint c9.maps.generic.t16 : "Maps - t14-t16 - high reds"
 
@@ -774,13 +773,29 @@ Hide
     Rarity <= Magic
     Class "Flasks"
     AreaLevel >= 65
-    SetTextColor 0 240 190 255
+ #   SetTextColor 0 240 190 255
     SetBorderColor 0 240 190 255
     SetBackgroundColor 20 20 0 255
 
 # Any Charms
+
+# Strict addition
 Show
-    BaseType "Stone Charm" "Golden Charm" "Amethyst Charm" "Thawing Charm"
+    BaseType " Charm"
+    Quality > 0
+    ItemLevel >= 79
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 25 100 75
+    PlayEffect Grey Temp
+    SetFontSize 38
+
+Hide
+    BaseType " Charm"
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 25 100 75
+
+Show
+    BaseType "Stone Charm" "Golden Charm" "Amethyst Charm" "Thawing Charm" "Antidote Charm"
     SetBorderColor 0 0 0 255
     SetBackgroundColor 25 100 75
     PlayEffect Grey Temp
@@ -832,6 +847,12 @@ Show
     MinimapIcon 1 Yellow Diamond
     Continue
 
+
+# Strict Addition
+#Hide
+#    Class "Rings" "Amulets" "Belts"
+#    ItemLevel < 79
+
 Show
     BaseType "Golden Obi" "Utility Belt" "Mail Belt" "Wide Belt" "Fine Belt" "Double Belt" "Ornate Belt" "Long Belt"
     Class "Belts"
@@ -859,7 +880,7 @@ Show
 # Strict addition
 Hide
     Rarity <= Magic
-    AreaLevel >= 75
+    
 
 
 #--------------------------
