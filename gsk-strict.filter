@@ -258,7 +258,7 @@ Show
     MinimapIcon 2 Blue Diamond
 
 # Strict addition
-Hide
+Show
     BaseType "Iron Rune"
     SetTextColor 0 240 190
 
