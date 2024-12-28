@@ -1,0 +1,1398 @@
+#===============================================================================================================
+# based on NeverSink's Indepth Loot Filter - for Path of Exile
+
+#--------------------------
+# Custom Rule - adapt yourself
+#--------------------------
+
+
+# Meaning of: Continue
+# The filter will apply additional rules from the remaining filter to the item as well.
+# if i.e. the item you have added in the custom rule will be hidden later in the filer, the the item will not be shown unless Alt is pressed (but then with the defined style)
+# Other example: if the item will another bordercolor later in the filer, the pink border will be overwritten
+# add a hash symbol in front of Continue to remove this behaviour
+
+# Items have a pink border and are displayed bigger
+#Show
+#    BaseType "Expert Bombard Crossbow"
+#    SetBackgroundColor 100 0 100 255
+#   SetBorderColor 255 16 230
+#   SetFontSize 35
+#    PlayAlertSound 3 300
+#    PlayEffect Pink
+#    MinimapIcon 0 Pink Circle
+#    Continue
+
+
+#--------------------------
+# Overrides - Uniques, Valuables
+#--------------------------
+
+Show
+    Rarity Unique
+    SetTextColor 175 96 37 255
+    SetBorderColor 175 96 37 255
+    SetBackgroundColor 53 13 13 255
+    PlayAlertSound 3 300
+    PlayEffect Brown
+    MinimapIcon 2 Brown Star
+    SetFontSize 40
+
+
+#--------------------------
+# Gold
+#--------------------------
+
+Show
+    StackSize >= 1000
+    BaseType == "Gold"
+    SetTextColor 255 255 255
+    SetBorderColor 255 255 255
+    PlayEffect Orange Temp
+
+
+# Strict addition
+Hide
+    StackSize <= 500
+    BaseType == "Gold"
+    SetTextColor 180 180 180
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 0 0 0 180
+    
+
+Hide
+    StackSize <= 150
+    BaseType == "Gold"
+    SetTextColor 180 180 180
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 0 0 0 180
+    AreaLevel >= 65
+
+Hide
+    StackSize <= 50
+    BaseType == "Gold"
+    SetTextColor 180 180 180
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 0 0 0 180
+    AreaLevel >= 45
+
+Show
+    BaseType == "Gold"
+    SetTextColor 180 180 180
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 0 0 0 180
+
+
+#--------------------------
+# Uncut Gems
+#--------------------------
+
+## Level 20 and higher
+Show
+    BaseType "Uncut "
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 0 Red Star
+    ItemLevel >= 20
+
+# High level & maps
+Show
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    SetFontSize 40
+    ItemLevel >= 19
+
+# Strict addition
+Hide
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    ItemLevel < 19
+
+Show
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayEffect Cyan
+    ItemLevel >= 17
+    AreaLevel > 77
+    
+Show
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    ItemLevel >= 17
+    AreaLevel <= 77
+    AreaLevel > 64
+
+Show
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240i
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    AreaLevel <= 74
+    AreaLevel > 64
+    ItemLevel > 14
+    ItemLevel < 17
+
+Show
+    BaseType "Uncut Support"
+    AreaLevel < 75
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayEffect Cyan
+
+Hide
+    BaseType "Uncut Support"
+    AreaLevel >= 75
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetFontSize 23
+
+Hide
+    BaseType "Uncut Skill"
+    AreaLevel >= 65
+    ItemLevel <= 14
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetFontSize 23
+
+Hide
+    BaseType "Uncut Spirit"
+    AreaLevel >= 65
+    ItemLevel <= 14
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetFontSize 23
+
+
+# Campaign (Show all the same)
+Show
+    BaseType "Uncut "
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    PlayAlertSound 2 300
+    PlayEffect Cyan
+    MinimapIcon 1 Cyan Triangle
+    AreaLevel <= 65
+
+
+# Failsafe (show them very small)
+Show
+    BaseType "Uncut Skill"
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetFontSize 23
+
+Show
+    BaseType "Uncut Spirit"
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetFontSize 23
+
+Show
+    BaseType "Uncut Support"
+    SetTextColor 20 240 240
+    SetBorderColor 20 240 240
+    SetFontSize 23
+
+Show
+    Class "Skill Gems"
+
+
+#--------------------------
+# Socketables and Special Character Equipment
+#--------------------------
+
+# Special A Tier - League specific socketables and jewels
+    Show
+    BaseType "Soul Core" "Timeless"
+    SetTextColor 0 240 190
+    SetBorderColor 0 240 190
+    SetFontSize 40
+    MinimapIcon 2 Cyan Triangle
+    PlayEffect Cyan
+
+# Special A Tier - Sanctum Relics
+    Show
+    Class "Relic"
+    SetTextColor 0 240 190
+    SetBorderColor 0 240 190
+    SetFontSize 40
+    MinimapIcon 2 Cyan Triangle
+    PlayEffect Cyan
+
+# Special A Tier - Rare Jewels
+Show
+    Class "Jewel"
+    Rarity Rare
+    SetFontSize 40
+    SetTextColor 220 220 0 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 120 120 0 225
+    PlayAlertSound 3 300
+    PlayEffect Blue
+    MinimapIcon 2 Blue Diamond
+
+# Special B Tier - Any Jewels
+Show
+    Class "Jewel"
+    Rarity Magic
+    SetFontSize 40
+    SetTextColor 0 75 250 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 0 20 40 255
+    PlayAlertSound 3 300
+    PlayEffect Blue
+    MinimapIcon 2 Blue Diamond
+
+# Strict addition
+Show
+    BaseType "Iron Rune"
+    SetTextColor 0 240 190
+
+
+Hide
+    BaseType " Rune"
+    SetTextColor 0 240 190
+    
+
+# Special B Tier - Any Runes
+Show
+    BaseType " Rune"
+    SetTextColor 0 240 190
+    PlayEffect Cyan Temp
+
+
+#--------------------------
+# Currency
+#--------------------------
+
+## Divine Orb Style
+Show
+    Class "Currency"
+    BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 0 Red Star
+
+# Currency Tier A: Gemcutter, Annullment
+Show
+    Class "Currency"
+    BaseType "Gemcutter's Prism" "Orb of Annulment" "Orb of Chance" "Greater Jeweller's Orb"
+    SetTextColor 255 255 255 255
+    SetBorderColor 255 255 255 255
+    SetBackgroundColor 240 90 35
+    PlayAlertSound 1 300
+    PlayEffect White
+    MinimapIcon 1 White Circle
+    SetFontSize 40
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+    Class "Currency"
+    BaseType "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Orb of Chance"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    SetBackgroundColor 76 51 12
+    PlayAlertSound 2 300
+    PlayEffect White
+    MinimapIcon 1 White Circle
+    SetFontSize 40
+
+Show
+    Class "Currency"
+    BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    SetBackgroundColor 76 51 12
+    PlayAlertSound 2 300
+    PlayEffect White
+    MinimapIcon 1 White Circle
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+
+# Strict addition
+Hide
+    BaseType "Regal Shard"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    
+Show
+    Class "Currency"
+    BaseType "Orb of Augmentation" "Orb of Transmutation"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    
+Show
+    Class "Currency"
+    BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" "Chance Shard"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    MinimapIcon 2 Grey Circle
+
+Show
+    Class "Currency"
+    BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    MinimapIcon 2 Grey Circle
+
+Show
+    Class "Currency"
+    BaseType "Shard"
+
+Show
+    Class "Currency"
+    BaseType "Wisdom"
+    AreaLevel < 68
+
+Hide
+    Class "Currency"
+    BaseType "Wisdom"
+    AreaLevel >= 68
+
+
+# Unknown currency
+Show
+    Class "Currency"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    SetBackgroundColor 76 51 12
+    PlayAlertSound 2 300
+    PlayEffect Pink
+    MinimapIcon 1 White Circle
+
+
+#------------------------------------
+# Maps
+#------------------------------------
+
+## Pinnacle Keys
+Show
+    Class "Pinnacle Keys"
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 0 Red Star
+
+# Fragments (map like items)
+Show
+BaseType "Simulacrum" " Tablet" "Breachstone" "Barya" "Ultimatum" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
+    SetFontSize 42
+    SetTextColor 255 85 85 255
+    SetBorderColor 255 85 85 255
+    SetBackgroundColor 40 0 30 255
+    PlayAlertSound 5 300
+    PlayEffect Yellow
+    MinimapIcon 1 Yellow UpsideDownHouse
+
+#------------------------------------
+#   [3101] Generic Decorators
+#------------------------------------
+
+# !! Waypoint c9.maps.decorators.all : "Maps - decorators"
+
+Show # $type->maps $tier->deco_zone1general
+    WaystoneTier >= 14
+    BaseType "Waystone"
+    SetBorderColor 0 0 0 255
+    Continue
+
+Show # $type->maps $tier->deco_zone2general
+    WaystoneTier >= 11
+    WaystoneTier <= 13
+    BaseType "Waystone"
+    SetBorderColor 0 0 0 255
+    Continue
+
+Show # $type->maps $tier->deco_zone3general
+    WaystoneTier >= 6
+    WaystoneTier <= 10
+    BaseType "Waystone"
+    SetBorderColor 200 200 200 255
+    Continue
+
+Show # $type->maps $tier->deco_zone4general
+    WaystoneTier >= 1
+    WaystoneTier <= 5
+    BaseType "Waystone"
+    SetBorderColor 200 200 200 255
+    Continue
+
+Show # $type->maps $tier->deco_mapup_t16
+    WaystoneTier >= 16
+    BaseType "Waystone"
+    AreaLevel < 80
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # $type->maps $tier->deco_mapup_t15
+    WaystoneTier >= 15
+    BaseType "Waystone"
+    AreaLevel < 79
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # $type->maps $tier->deco_mapup_t14
+    WaystoneTier >= 14
+    BaseType "Waystone"
+    AreaLevel < 78
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D4 $type->maps $tier->deco_mapup_t13
+    WaystoneTier >= 13
+    BaseType "Waystone"
+    AreaLevel < 77
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D4 $type->maps $tier->deco_mapup_t12
+    WaystoneTier >= 12
+    BaseType "Waystone"
+    AreaLevel < 76
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D4 $type->maps $tier->deco_mapup_t11
+    WaystoneTier >= 11
+    BaseType "Waystone"
+    AreaLevel < 75
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t10
+    WaystoneTier >= 10
+    BaseType "Waystone"
+    AreaLevel < 74
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t9
+    WaystoneTier >= 9
+    BaseType "Waystone"
+    AreaLevel < 73
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t8
+    WaystoneTier >= 8
+    BaseType "Waystone"
+    AreaLevel < 72
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t7
+    WaystoneTier >= 7
+    BaseType "Waystone"
+    AreaLevel < 71
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t6
+    WaystoneTier >= 6
+    BaseType "Waystone"
+    AreaLevel < 70
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t5
+    WaystoneTier >= 5
+    BaseType "Waystone"
+    AreaLevel < 69
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t4
+    WaystoneTier >= 4
+    BaseType "Waystone"
+    AreaLevel < 68
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t3
+    WaystoneTier >= 3
+    BaseType "Waystone"
+    AreaLevel < 67
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t2
+    WaystoneTier >= 2
+    BaseType "Waystone"
+    AreaLevel < 66
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # %D3 $type->maps $tier->deco_mapup_t1
+    WaystoneTier >= 1
+    BaseType "Waystone"
+    AreaLevel < 65
+    SetBorderColor 220 50 0 255
+    Continue
+
+Show # $type->maps $tier->decor_implicit
+    HasImplicitMod True
+    BaseType "Waystone"
+    SetBorderColor 255 180 0 255
+    Continue
+
+Show # $type->maps $tier->deco_corruptedmod
+    CorruptedMods >= 1
+    BaseType "Waystone"
+    SetBorderColor 255 180 0 255
+    Continue
+
+Show # $type->maps $tier->base_fontsize
+    BaseType "Waystone"
+    SetFontSize 45
+    Continue
+
+Show # $type->maps $tier->base_fontsize
+    BaseType "Waystone"
+    SetFontSize 38
+    WaystoneTier <= 10
+    AreaLevel <= 75
+    Continue
+
+#------------------------------------
+#   [3102] Map progression
+#------------------------------------
+
+# Strict addition
+Hide
+    WaystoneTier < 11
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+
+
+# !! Waypoint c9.maps.generic.t16 : "Maps - t14-t16 - high reds"
+
+Show # $type->maps $tier->maps_a_t16
+    WaystoneTier >= 16
+    BaseType "Waystone"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 235 235 235 255
+    PlayAlertSound 5 300
+    PlayEffect Yellow
+    MinimapIcon 1 Red Square
+
+Show # $type->maps $tier->maps_a_t15
+    WaystoneTier 15
+    BaseType "Waystone"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 235 235 235 255
+    PlayAlertSound 5 300
+    PlayEffect Yellow
+    MinimapIcon 1 Red Square
+
+Show # $type->maps $tier->maps_a_t14
+    WaystoneTier 14
+    BaseType "Waystone"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 235 235 235 255
+    PlayAlertSound 5 300
+    PlayEffect Yellow
+    MinimapIcon 1 Red Square
+
+# !! Waypoint c9.maps.generic.t14 : "Maps - t11-t13 - low reds"
+
+Show # %H5 $type->maps $tier->maps_b_t13
+    WaystoneTier 13
+    BaseType "Waystone"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 200 200 200 255
+    PlayAlertSound 5 300
+    PlayEffect Yellow
+    MinimapIcon 1 Red Square
+
+Show # %H5 $type->maps $tier->maps_b_t12
+    WaystoneTier 12
+    BaseType "Waystone"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 200 200 200 255
+    PlayAlertSound 5 300
+    PlayEffect Yellow
+    MinimapIcon 1 Red Square
+
+Show # %H5 $type->maps $tier->maps_b_t11
+    WaystoneTier 11
+    BaseType "Waystone"
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 200 200 200 255
+    PlayAlertSound 5 300
+    PlayEffect Yellow
+    MinimapIcon 1 Red Square
+
+# !! Waypoint c9.maps.generic.t10 : "Maps - t6-t10 - yellow maps"
+
+Show # %H4 $type->maps $tier->maps_c_t10
+    WaystoneTier 10
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 1 Yellow Square
+
+Show # %H4 $type->maps $tier->maps_c_t9
+    WaystoneTier 9
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 1 Yellow Square
+
+Show # %H4 $type->maps $tier->maps_c_t8
+    WaystoneTier 8
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 1 Yellow Square
+
+Show # %H4 $type->maps $tier->maps_c_t7
+    WaystoneTier 7
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 1 Yellow Square
+
+Show # %H4 $type->maps $tier->maps_c_t6
+    WaystoneTier 6
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 1 Yellow Square
+
+# !! Waypoint c9.maps.generic.t5 : "maps - T1-T5 - white maps"
+
+Show # %H4 $type->maps $tier->maps_d_t5
+    WaystoneTier 5
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 2 White Square
+
+Show # %H4 $type->maps $tier->maps_d_t4
+    WaystoneTier 4
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 2 White Square
+
+Show # %H4 $type->maps $tier->maps_d_t3
+    WaystoneTier 3
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 2 White Square
+
+Show # %H4 $type->maps $tier->maps_d_t2
+    WaystoneTier 2
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 2 White Square
+
+Show # %H4 $type->maps $tier->maps_d_t1
+    WaystoneTier 1
+    BaseType "Waystone"
+    SetTextColor 255 255 255 255
+    SetBackgroundColor 20 20 0 255
+    PlayAlertSound 4 300
+    PlayEffect White
+    MinimapIcon 2 White Square
+
+Show # $type->maps $tier->restex
+    BaseType "Waystone"
+    SetFontSize 45
+    SetTextColor 255 0 255 255
+    SetBorderColor 255 0 255 255
+    SetBackgroundColor 100 0 100 255
+    PlayAlertSound 3 300
+    PlayEffect Pink
+    MinimapIcon 0 Pink Circle
+
+
+#--------------------------
+# Flasks & Charms
+#--------------------------
+
+
+# Strict addition
+Show
+    Rarity <= Magic
+    Quality > 1
+    Class "Flasks"
+    ItemLevel >= 81
+    DropLevel >= 60
+#    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
+
+Hide
+    Rarity <= Magic
+    Class "Flasks"
+#    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
+
+Show
+    Rarity <= Magic
+    Class "Flasks"
+    ItemLevel >= 81
+    DropLevel >= 60
+#    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
+
+Show
+    Rarity <= Magic
+    Class "Flasks"
+    Quality > 15
+    DropLevel >= 60
+#    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
+
+Show
+    Rarity <= Magic
+    Class "Flasks"
+    AreaLevel < 65
+#    SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
+
+Hide
+    Rarity <= Magic
+    Class "Flasks"
+    AreaLevel >= 65
+ #   SetTextColor 0 240 190 255
+    SetBorderColor 0 240 190 255
+    SetBackgroundColor 20 20 0 255
+
+# Any Charms
+
+# Strict addition
+Show
+    BaseType " Charm"
+    Quality > 0
+    ItemLevel >= 79
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 25 100 75
+    PlayEffect Grey Temp
+    SetFontSize 38
+
+Hide
+    BaseType " Charm"
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 25 100 75
+
+Show
+    BaseType "Stone Charm" "Golden Charm" "Amethyst Charm" "Thawing Charm" "Antidote Charm"
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 25 100 75
+    PlayEffect Grey Temp
+    SetFontSize 38
+
+Show
+    BaseType " Charm"
+    SetBorderColor 0 0 0 255
+    SetBackgroundColor 25 100 75
+    PlayEffect Grey Temp
+
+
+#--------------------------
+# FISHING ROD
+#--------------------------
+
+
+Show
+    BaseType "Fishing Rod"
+    SetFontSize 45
+    SetTextColor 240 0 0 255
+    SetBorderColor 240 0 0 255
+    SetBackgroundColor 70 0 20 255
+    PlayAlertSound 3 300
+    PlayEffect Orange
+    MinimapIcon 0 Orange Pentagon
+
+Show
+    Class == "Fishing Rods"
+    SetFontSize 45
+    SetTextColor 240 0 0 255
+    SetBorderColor 240 0 0 255
+    SetBackgroundColor 70 0 20 255
+    PlayAlertSound 3 300
+    PlayEffect Orange
+    MinimapIcon 0 Orange Pentagon
+
+
+#--------------------------
+# Rings, Amulets, Belts
+#--------------------------
+
+Show
+    Class "Rings" "Amulets" "Belts"
+    Rarity Rare
+    SetTextColor 233 206 75
+    SetBorderColor 233 206 75
+    PlayEffect Yellow
+    MinimapIcon 1 Yellow Diamond
+    Continue
+
+
+# Strict Addition
+#Hide
+#    Class "Rings" "Amulets" "Belts"
+#    ItemLevel < 79
+
+Show
+    BaseType "Golden Obi" "Utility Belt" "Mail Belt" "Wide Belt" "Fine Belt" "Double Belt" "Ornate Belt" "Long Belt"
+    Class "Belts"
+    SetFontSize 45
+
+Show
+    BaseType "Ruby Ring" "Amethyst Ring" "Prismatic Ring" "Breach Ring" "Sapphire Ring" "Topaz Ring"
+    Class "Rings"
+    SetFontSize 45
+
+Show
+    BaseType "Azure Amulet" "Amber Amulet" "Lapis Amulet" "Jade Amulet" "Lunar Amulet" "Bloodstone Amulet" "Stellar Amulet" "Solar Amulet"
+    Class "Amulets"
+    SetFontSize 45
+
+Show
+    Class "Rings" "Amulets" "Belts"
+    SetFontSize 38
+
+
+#--------------------------
+# Base Items
+#--------------------------
+
+# Strict addition
+Hide
+    Rarity <= Magic
+    
+# Strict addition
+Hide
+    Rarity <= Magic
+
+#--------------------------
+# Salvagable Items Decorator
+#--------------------------
+
+# all with sockets (campaign only)
+Show
+    Quality >= 0 # fixes bug that socket rules do not work
+    Sockets > 0
+    Rarity <= Magic
+    AreaLevel < 65
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
+
+# all with quality (campaign only)
+Show
+    Quality > 10
+    Rarity <= Magic
+    AreaLevel < 65
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
+
+# all with socket and quality
+Show
+    Sockets > 0
+    Quality > 10
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
+
+# all with 2 or more sockets
+Show
+    Quality >= 0 # fixes bug that socket rules do not work
+    Sockets >= 2
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
+
+# small with one socket
+Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality >= 0 # fixes bug that socket rules do not work
+    Sockets > 0
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
+
+# small with quality
+Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality > 10
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+    Continue
+
+# caster weapon
+Show
+    Class "Wands" "Sceptres"
+    Quality > 10
+    Rarity <= Magic
+    SetBackgroundColor 70 50 50
+    SetFontSize 35
+    Continue
+
+
+#--------------------------
+# Elite Armour Bases
+#--------------------------
+
+# Str
+Show
+    BaseType "Expert Moulded Mitts" "Expert Stone Greaves" "Expert Vaal Cuirass" "Expert Steel Plate" "Expert Iron Cuirass" "Expert Elite Greathelm"
+    Rarity <= Magic
+    SetBorderColor 255 0 0
+
+# Dex
+Show
+    BaseType "Expert Spined Bracers" "Expert Lizardscale Boots" "Expert Serpentscale Coat" "Expert Studded Vest" "Expert Pathfinder Coat" "Expert Hunter Hood"
+    Rarity <= Magic
+    SetBorderColor 0 255 0
+
+# Int
+Show
+    BaseType "Expert Intricate Gloves" "Expert Feathered Sandals" "Expert Silk Slippers" "Expert Altar Robe" "Expert Keth Raiment" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
+    Rarity <= Magic
+    SetBorderColor 0 0 255
+
+# Str-Int
+Show
+    BaseType "Expert Goldcast Cuffs" "Expert Pelt Leggings" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Pelt Mantle" "Expert Heavy Crown"
+    Rarity <= Magic
+    SetBorderColor 127 0 127
+
+# Str-Dex
+Show
+    BaseType "Expert Doubled Gauntlets" "Expert Stacked Sabatons" "Expert Scale Mail" "Expert Cloaked Mail" "Expert Rogue Armour" "Expert Shielded Helm"
+    Rarity <= Magic
+    SetBorderColor 127 127 0
+
+# Dex-Int
+Show
+    BaseType "Expert Spiral Wraps" "Expert Hunting Shoes" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Expert Waxed Jacket" "Expert Tribal Mask"
+    Rarity <= Magic
+    SetBorderColor 0 127 127
+
+
+#--------------------------
+# Elite Weapon Bases
+#--------------------------
+
+# Str
+Show
+    BaseType "Expert Brigand Mace" "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer" "Expert Plated Mace" "Expert Slim Mace" "Expert Leaden Greathammer" "Expert Cultist Greathammer" "Expert Crumbling Maul" "Expert Oak Greathammer" "Expert Temple Maul" "Expert Forge Maul"
+    Rarity <= Magic
+    SetBorderColor 255 0 0
+    SetFontSize 23
+
+# Dex
+Show
+    BaseType "Expert Dualstring Bow""
+    Rarity <= Magic
+    SetBorderColor 0 255 0
+
+Show
+    Rarity <= Magic
+    BaseType "Expert Zealot Bow" "Expert Cultist Bow" "Expert Warden Bow" "Expert Composite Bow" "Expert Shortbow"
+    SetBorderColor 0 255 0
+    SetFontSize 23
+
+# Str-Dex
+Show
+    BaseType "Expert Forlorn Crossbow" "Expert Bombard Crossbow" "Expert Varnished Crossbow" "Expert Sturdy Crossbow"
+    Rarity <= Magic
+    SetBorderColor 127 127 0
+
+Show
+    Rarity <= Magic
+    BaseType "Expert Dyad Crossbow" "Expert Tense Crossbow"
+    SetBorderColor 127 127 0
+    SetFontSize 23
+
+# Dex-Int
+Show
+    BaseType "Expert Barrier Quarterstaff" "Expert Long Quarterstaff" "Expert Crescent Quarterstaff"
+    Rarity <= Magic
+    SetBorderColor 0 127 127
+
+Show
+    BaseType "Expert Slicing Quarterstaff" "Expert Crackling Quarterstaff" "Expert Gothic Quarterstaff"
+    Rarity <= Magic
+    SetBorderColor 0 127 127
+    SetFontSize 23
+
+
+
+#--------------------------
+# Elite Offhand Bases
+#--------------------------
+
+# Shields
+# Str
+Show
+    BaseType "Expert Stone Tower Shield"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 255 0 0
+
+Show
+    BaseType "Expert Rampart Tower Shield" "Expert Braced Tower Shield"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 255 0 0
+    SetFontSize 23
+
+# Dex
+Show
+    BaseType "Expert Edged Buckler" "Expert Spiked Buckler" "Expert Plated Buckler"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 0 255 0
+
+# Str-Int
+Show
+    BaseType "Expert Omen Crest Shield"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 127 0 127
+
+Show
+    BaseType "Expert Jingling Crest Shield" "Expert Sigil Crest Shield"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 127 0 127
+    SetFontSize 23
+
+# Str-Dex
+Show
+    BaseType "Expert Feathered Targe"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 127 127 0
+
+Show
+    BaseType "Expert Crescent Targe" "Expert Pelage Targe"
+    Class  "Shields"
+    Rarity <= Magic
+    SetBorderColor 127 127 0
+    SetFontSize 23
+
+# Quiver
+Show
+    BaseType "Toxic" "Serrated" "Primed" "Penetrating" "Visceral"
+    Class  "Quivers"
+    Rarity <= Magic
+    SetBorderColor 0 255 0
+
+# Foci (Focus)
+Show
+    BaseType "Expert Plumed Focus"
+    Class  "Foci"
+    Rarity <= Magic
+    SetBorderColor 0 0 255
+
+Show
+    BaseType "Expert Crystal Focus" "Expert Antler Focus"
+    Class  "Foci"
+    Rarity <= Magic
+    SetBorderColor 0 0 255
+    SetFontSize 23
+
+
+#--------------------------
+# Exceptional & Normall Armour Bases
+#--------------------------
+
+# Str
+Show
+    BaseType " Mitts" " Greaves" " Cuirass" " Plate" " Greathelm"
+    SetBorderColor 255 0 0
+    Continue
+
+# Dex
+Show
+    BaseType " Bracers" " Boots" " Coat" " Vest" " Hood" " Cap"
+    SetBorderColor 0 255 0
+    Continue
+
+# Int
+Show
+    BaseType " Gloves" " Sandals" " Slippers" " Robe" " Raiment" " Tiara" " Circlet"
+    SetBorderColor 0 0 255
+    Continue
+
+# Str-Int
+Show
+    BaseType " Cuffs" " Leggings" " Mantle" " Crown"
+    SetBorderColor 127 0 127
+    Continue
+
+
+# Str-Dex
+Show
+    BaseType " Gauntlets" " Sabatons" " Mail"  " Armour" " Helm"
+    SetBorderColor 127 127 0
+    Continue
+
+# Dex-Int
+Show
+    BaseType " Wraps" " Shoes" " Jacket" " Mask" " Garb"
+    SetBorderColor 0 127 127
+    Continue
+
+
+#--------------------------
+# Exceptional & Normal Weapon Bases
+#--------------------------
+
+# Str
+Show
+    Class " Maces"
+    SetBorderColor 255 0 0
+    Continue
+
+# Dex
+Show
+    Class "Bows"
+    SetBorderColor 0 255 0
+    Continue
+
+# Str-Dex
+Show
+    Class "Crossbows"
+    SetBorderColor 127 127 0
+    Continue
+
+# Dex-Int
+Show
+    Class "Quarterstaves"
+    SetBorderColor 0 127 127
+    Continue
+
+
+#--------------------------
+# Exceptional & Normal Offhand Bases
+#--------------------------
+
+# Shields
+# Str
+Show
+    BaseType " Tower Shield"
+    Class  "Shields"
+    SetBorderColor 255 0 0
+    Continue
+
+# Dex
+Show
+    BaseType " Buckler"
+    Class  "Shields"
+    SetBorderColor 0 255 0
+    Continue
+
+# Str-Int
+Show
+    BaseType " Crest Shield"
+    Class  "Shields"
+    SetBorderColor 127 0 127
+    Continue
+
+# Str-Dex
+Show
+    BaseType " Targe"
+    Class  "Shields"
+    SetBorderColor 127 127 0
+    Continue
+
+# Quiver
+Show
+    Class  "Quivers"
+    SetBorderColor 0 255 0
+    Continue
+
+# Foci (Focus)
+Show
+    Class  "Foci"
+    SetBorderColor 0 0 255
+    Continue
+
+
+#--------------------------
+# Salvagable Items Show
+#--------------------------
+
+# all with sockets (campaign only)
+Show
+    Quality >= 0 # fixes bug that socket rules do not work
+    Sockets > 0
+    Rarity <= Magic
+    AreaLevel < 65
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# all with quality (campaign only)
+Show
+    Quality > 10
+    Rarity <= Magic
+    AreaLevel < 65
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# all with socket and quality
+Show
+    Sockets > 0
+    Quality > 10
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# all with 2 or more sockets
+Show
+    Quality >= 0 # fixes bug that socket rules do not work
+    Sockets >= 2
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# small with one socket
+Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality >= 0 # fixes bug that socket rules do not work
+    Sockets > 0
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# small with quality
+Show
+    Class "Gloves" "Boots" "Helmets"
+    Quality > 10
+    Rarity <= Magic
+    SetFontSize 35
+    SetBackgroundColor 70 50 50
+
+# caster weapon
+Show
+    Class "Wands" "Sceptres"
+    Quality > 10
+    Rarity <= Magic
+    SetBackgroundColor 70 50 50
+    SetFontSize 35
+
+
+#--------------------------
+# BASE ITEMS SHOW/HIDE
+#--------------------------
+
+Show
+    BaseType "Expert "
+    Rarity == Rare
+    SetFontSize 35
+
+Hide 
+    Rarity == Rare
+    Class "Quarterstaves"
+
+Show
+    Rarity == Rare
+    Class "Quivers" "Wands" "Sceptres" "Staves"
+
+Hide
+    Rarity == Rare
+    
+Show
+    Rarity == Rare
+    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres" "Staves"
+
+Hide
+    Rarity <= Magic
+    BaseType "Expert Gauze Wraps" "Expert Linen Wraps" "Expert Aged Cuffs" "Expert Rope Cuffs" "Expert Layered Gauntlets" "Expert Ringmail Gauntlets" "Expert Jewelled Gloves" "Expert Sombre Gloves" "Expert Sectioned Bracers" "Expert Firm Bracers" "Expert Bolstered Mitts" "Expert Riveted Mitts" "Expert Threaded Shoes" "Expert Frayed Shoes" "Expert Secured Leggings" "Expert Padded Leggings" "Expert Braced Sabatons" "Expert Mail Sabatons" "Expert Wrapped Sandals" "Expert Steeltoe Boots" "Expert Laced Boots" "Expert Trimmed Greaves" "Expert Iron Greaves" "Expert Veiled Mask" "Expert Face Mask" "Expert Martyr Crown" "Expert Horned Crown" "Expert Cowled Helm" "Expert Guarded Helm""Expert Wicker Tiara" "Expert Swathed Cap" "Expert Felt Cap" "Expert Spired Greathelm" "Expert Soldier Greathelm"
+    AreaLevel >= 65
+
+# Failsafe (not explicitly listed Expert Items)
+Show
+    BaseType "Expert "
+    SetTextColor 255 0 127
+
+Show
+    Rarity <= Magic
+    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+    AreaLevel < 65
+
+Hide
+    Rarity <= Magic
+    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+    AreaLevel >= 65
+
+# (fix for the problem that quaterstaves are also staves)
+# TODO: define good Wand/Scepter bases and move them
+Show
+    Class "Staves" "Wands" "Sceptres"
+    Rarity <= Magic
+    SetBorderColor 0 0 255
+
+Show
+    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres" "Staves"
+
+
+#--------------------------
+# FAILSAFE
+#--------------------------
+
+Show
+    SetBackgroundColor 100 0 100 255
+    SetBorderColor 255 16 230
+    SetFontSize 45
+    PlayAlertSound 3 300
+    PlayEffect Pink
+    MinimapIcon 0 Pink Circle
