@@ -297,6 +297,15 @@ Show
     PlayEffect White
     MinimapIcon 1 White Circle
 
+Show
+    Class "Omen"
+    SetTextColor 255 207 132
+    SetBorderColor 255 207 132
+    SetBackgroundColor 76 51 12
+    PlayAlertSound 2 300
+    PlayEffect White
+    MinimapIcon 1 White Circle
+
 # Currency Tier C: Vaal, Chaos, Exalt, Exotic
 Show
     Class "Currency"
