@@ -1156,6 +1156,12 @@ Show
 # Exceptional & Normall Armour Bases
 #--------------------------
 
+# Str-Int
+Show
+    BaseType " Cuffs" " Leggings" " Mantle" " Crown" "Vestment"
+    SetBorderColor 127 0 127
+    Continue
+
 # Str
 Show
     BaseType " Mitts" " Greaves" " Cuirass" " Plate" " Greathelm"
@@ -1173,13 +1179,6 @@ Show
     BaseType " Gloves" " Sandals" " Slippers" " Robe" " Raiment" " Tiara" " Circlet"
     SetBorderColor 0 0 255
     Continue
-
-# Str-Int
-Show
-    BaseType " Cuffs" " Leggings" " Mantle" " Crown"
-    SetBorderColor 127 0 127
-    Continue
-
 
 # Str-Dex
 Show
